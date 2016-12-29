@@ -50,7 +50,7 @@ An array of transaction data, where each entry has the following fields:
 
 | Field         | Description                                                                                                                                                                             |
 |:--------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| TimeStamp     | ISO8601 (UTC time) YYYY-MM-DDThh:mm:ss.dddZ (Ex. 2015-01-16T10:53:31.601Z).                                                                                                             |
+| TimeStamp     | ISO8601 (UTC time) YYYY-MM-DDThh_mm_ssZ (Ex. 2015-01-16T10_53_31Z).                                                                                                             |
 | OrderId       | Merchant's OrderID.                                                                                                                                                                     |
 | TransactionId | The id of the transaction.                                                                                                                                                              |
 | Amount        | The amount that has been reserved.                                                                                                                                                      |
@@ -63,14 +63,14 @@ An array of transaction data, where each entry has the following fields:
 
 [
   {
-    "TimeStamp": "2016-04-08T07:45:36.533Z",
+    "TimeStamp": "2016-04-08T07_45_36Z",
     "OrderId": "DB TESTING 2015060908",
     "TransactionId": "61872634691623746",
     "Amount": 100.25,
     "CaptureType": "Full"
   },
   {
-    "TimeStamp": "2016-04-09T07:45:36.672Z",
+    "TimeStamp": "2016-04-09T07_45_36Z",
     "OrderId": "DB TESTING 2015060908",
     "TransactionId": "61872634691623799"
     "Amount": 100.25,
@@ -104,12 +104,12 @@ to the request to invoke the service in test-mode.
 ## Usage Guide
 
 <ul>
-<li>Request reservations for merchant 'APPDK0074110008' in the date/time interval ['2016-02-01T12:00'..'2016-02-01T13:30']</li>
+<li>Request reservations for merchant 'APPDK0074110008' in the date/time interval ['2016-02-01T12_00'..'2016-02-01T13_30']</li>
 <ul>
 <li>http://localhost:62554/api/v1/reservations/merchants/APPDK0074110008/2016-02-01T12_00/2016-02-01T13_30</li>
 </ul>
 
-<li>Request reservations for merchant 'APPDK0074110008' in the date/time interval ['2016-02-01T12:00'..'2016-02-01T13:30'] for customer id '+4512345678'</li>
+<li>Request reservations for merchant 'APPDK0074110008' in the date/time interval ['2016-02-01T12_00'..'2016-02-01T13_30'] for customer id '+4512345678'</li>
 <ul>
 <li>http://localhost:62554/api/v1/reservations/merchants/APPDK0074110008/2016-02-01T12_00/2016-02-01T13_30?customerId=%2B4512345678</li>
 </ul>
