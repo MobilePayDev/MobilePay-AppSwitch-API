@@ -10,7 +10,7 @@ The MobilePay developer portal can be found [here](https://developer.mobeco.dk).
 _Please note that AppSwitch SOAP APIs are not available for new merchants. New merchants must instead use our REST APIs._
 
 The folder contains relevant documentation and WSDL-files for merchants using the SOAP-based solution.
-Please write to mp_appswitch@mobilepay.dk for example code regarding PKI factory and SOAP library.
+Please write to [help@mobilepay.dk](mailto://help@mobilepay.dk) for example code regarding PKI factory and SOAP library.
 
 ## AppSwitch best practice example
 In order to ensure a smooth user experience, we recommend all merchants follow our best practice implementation example.
