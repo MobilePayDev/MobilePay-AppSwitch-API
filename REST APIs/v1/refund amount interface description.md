@@ -15,7 +15,7 @@
 
 <!-- /TOC -->
 ## Interface Identity
-The __Refund Amount__ REST interface is used to refund money, either in part or the whole amount.
+The __Refund Amount__ REST interface is used to refund money, either in part or the whole amount. It is possible to refund transactions within 30 days after capture.
 
 <hr>
 ## Resources
