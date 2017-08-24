@@ -34,7 +34,7 @@ The following fields are part of the request URL
 | Field      | Description                                                                                                   |
 |:-----------|:--------------------------------------------------------------------------------------------------------------|
 | merchantId | Alphanumeric value consisting the string "APP", a country code, and 10 digits. For example "APPDK0123456789". |
-| orderId    | Alphanumeric value consisting of up to 50 characters.                                                         |
+| orderId    | Alphanumeric value consisting of 4 to 50 characters.                                                          |
 
 
 ### Responses
