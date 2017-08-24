@@ -15,7 +15,7 @@
 
 <!-- /TOC -->
 ## Interface Identity
-The __Refund Amount__ REST interface is used to refund money, either in part or the whole amount. It is possible to refund transactions within 30 days after capture.
+The __Refund Amount__ REST interface is used to refund money, either in part or the whole amount. It is possible to refund transactions within a year after capture.
 
 <hr>
 ## Resources
@@ -33,7 +33,7 @@ The __Refund Amount__ REST interface is used to refund money, either in part or 
 | Field      | Description                                                                                                   |
 |:-----------|:--------------------------------------------------------------------------------------------------------------|
 | merchantId | Alphanumeric value consisting the string "APP", a country code, and 10 digits. For example "APPDK0123456789". |
-| orderId    | Alphanumeric value consisting of up to 50 characters.                                                         |
+| orderId    | Alphanumeric value consisting of 4 to 50 characters.                                                          |
 
 Additionally the request requires content with the following fields:
 
