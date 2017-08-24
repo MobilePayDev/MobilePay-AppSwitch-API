@@ -37,7 +37,7 @@ The __Payment Status__ REST interface is used to get the status of a payment, as
 | Field      | Description                                                                                                   |
 |:-----------|:--------------------------------------------------------------------------------------------------------------|
 | merchantId | Alphanumeric value consisting the string "APP", a country code, and 10 digits. For example "APPDK0123456789". |
-| orderId    | Alphanumeric value consisting of up to 50 characters.                                                         |
+| orderId    | Alphanumeric value consisting of 4 to 50 characters.                                                          |
 
 
 ### Responses
