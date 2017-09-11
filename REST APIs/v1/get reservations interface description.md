@@ -16,8 +16,8 @@
 <!-- /TOC -->
 ## Interface Identity
 The __Get Reservations__ REST interface is used to get a list of reservations made by a merchant.
-
 <hr>
+
 ## Resources
 
 | Http Verb | Url Template                                                                                    | Description                                                                                     |
@@ -32,8 +32,8 @@ The __Get Reservations__ REST interface is used to get a list of reservations ma
 *   Full
     *   A full reservation means that the amount reserved must also be the amount captured. __It is not possible to capture less than the reserved amount__.
     *   If the reservation type if __full__, then the capture type must be __full__.
-
 <hr>
+
 ## Data Types and Constants
 
 ### Input Fields
@@ -56,8 +56,6 @@ An array of transaction data, where each entry has the following fields:
 | Amount        | The amount that has been reserved.                                                                                                                                                      |
 | CaptureType   | The capture type can be one of the following values:<br><br><ul><li>Full</li><li>Partial</li></ul><br>See [Reservation- and Capture Types](#reservation-and-capture-types) for details. |
 
-
-
 #### Examples
 ```
 
@@ -78,8 +76,8 @@ An array of transaction data, where each entry has the following fields:
   }
 ]
 ```
-
 <hr>
+
 ## Error Handling
 If an error occurs then one of the following http status codes will be returned:
 
@@ -89,9 +87,8 @@ If an error occurs then one of the following http status codes will be returned:
 | 404 Not Found             | <ul><li>MerchantNotFound</li><li>CustomerNotFound</li></ul>                                                                                                                                | `{ "Reason" : "MerchantNotFound" }`                                                                                                                                                          |
 | 408 Request Timeout       | One or more of the underlying services did not respond in time. This should be investigated by MobilePay team.                                                                                | <empty>                                                                                                                                                                                      |
 | 500 Internal Server Error | An error happened and should be investigated by MobilePay team.                                                                                                                               | <code>{<br>&nbsp;&nbsp;"CorrelationId":"a658ab24-70ab-4d05-a792-e5995f237c10",<br>&nbsp;&nbsp;"Errortype":"ServerError",<br>&nbsp;&nbsp;"Message":"Attempted to divide by zero."<br>}</code> |
-
-
 <hr>
+
 ## Variability
 It is possible to invoke the service in test-mode in production. This will not affect any real production data.
 Add the header
@@ -99,8 +96,8 @@ Add the header
     Test-mode: true
 
 to the request to invoke the service in test-mode.
-
 <hr>
+
 ## Usage Guide
 
 <ul>
