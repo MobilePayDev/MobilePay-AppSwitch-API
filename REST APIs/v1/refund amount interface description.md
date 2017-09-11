@@ -16,16 +16,15 @@
 <!-- /TOC -->
 ## Interface Identity
 The __Refund Amount__ REST interface is used to refund money, either in part or the whole amount. It is possible to refund transactions within a year after capture.
-
 <hr>
+
 ## Resources
 
 | Http Verb | Url Template                                      | Description                                                                            |
 |:----------|:--------------------------------------------------|:---------------------------------------------------------------------------------------|
 | PUT       | `/api/v1/merchants/{merchantId}/orders/{orderId}` | Refunds the transaction amount, either the entire amount or just a part of the amount. |
-
-
 <hr>
+
 ## Data Types and Constants
 
 ### Input Fields
@@ -68,7 +67,6 @@ Additionally the request requires content with the following fields:
 | OriginalTransactionId | The id of the transaction which is now being (partially) refunded.                 |
 | Remainder             | The remaining amount. If the transaction is completely refunded then this is 0.00. |
 
-
 #### Examples
 
 ```
@@ -78,8 +76,8 @@ Additionally the request requires content with the following fields:
     "Remainder" : 20.00
 }
 ```
-
 <hr>
+
 ## Error Handling
 If an error occurs then one of the following http status codes will be returned:
 
@@ -90,8 +88,8 @@ If an error occurs then one of the following http status codes will be returned:
 | 409 Conflict              | <ul><li>TransactionAlreadyRefunded</li><li>Failed</li><ul><li>The call has failed due to reasons that can not be disclosed to the merchant, e.g. the daily limit has been reached, or the credit card has been revoked.</li></ul><li>AmountNotAvailable</li><ul><li>The specified amount cannot be refunded.</li></ul><li>RefundNotPossible</li><ul><li>It is not possible to refund the amount, as no bank account is registered on MobilePay user.</li></ul></ul>   | `{ "Reason" : "Failed" }`                                                                                                                                                              |
 | 408 Request Timeout       | One or more of the underlying services did not respond in time. This should be investigated by MobilePay team.                                                                                                                                                                                                                                                                                                                                                           | <empty>                                                                                                                                                                                |
 | 500 Internal Server Error | An error happened and should be investigated by MobilePay team.                                                                                                                                                                                                                                                                                                                                                                                                          | <code>{<br>&nbsp;"CorrelationId":"a658ab24-70ab-4d05-a792-e5995f237c10",<br>&nbsp;&nbsp;"Errortype":"ServerError",<br>&nbsp;&nbsp;"Message":"Attempted to divide by zero."<br>}</code> |
-
 <hr>
+
 ## Variability
 It is possible to invoke the service in test-mode in production. This will not affect any real production data.
 Add the header
@@ -99,8 +97,8 @@ Add the header
     Test-mode: true
 
 to the request to invoke the service in test-mode.
-
 <hr>
+
 ## Usage Guide
 The following example refunds 20 DKK to a customer.
 
