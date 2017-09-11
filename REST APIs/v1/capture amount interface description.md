@@ -1,5 +1,4 @@
 # Capture Amount Interface Description
-
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Capture Amount Interface Description](#capture-amount-interface-description)
@@ -19,8 +18,8 @@
 
 ## Interface Identity
 The **Capture Amount** REST interface is used to capture previously reserved amounts.
-
 <hr>
+
 ## Resources
 
 | Http Verb | Url Template                                                   | Description                                                                                                                                                                                                                                                                                                                                                 |
@@ -37,6 +36,7 @@ The **Capture Amount** REST interface is used to capture previously reserved amo
     *   If the reservation type if __full__, then the capture type must be __full__.
 
 <hr>
+
 ## Data Types and Constants
 
 ### Input Fields
@@ -84,8 +84,8 @@ The response contains the following field:
     "TransactionId" : "61872634691623746"
 }
 ```
-
 <hr>
+
 ## Error Handling
 If an error occurs then one of the following http status codes will be returned:
 
@@ -96,9 +96,8 @@ If an error occurs then one of the following http status codes will be returned:
 | 408 Request Timeout       | One or more of the underlying services did not respond in time. This should be investigated by MobilePay team.                                                                                                                                                                                                                                                                         | `<empty>`                                                                                                                                                |
 | 409 Conflict              | <ul><li>TransactionAlreadyCaptured</li><li>TransactionAlreadyCancelled</li><li>Failed</li><ul><li>The call has failed due to reasons that can not be disclosed to the merchant, e.g. the daily limit has been reached, or the credit card has been revoked.</li></ul></ul>                                                                                                            | `{ "Reason" : "DuplicateOrderId" }`                                                                                                                      |
 | 500 Internal Server Error | An error happened and should be investigated by MobilePay team.                                                                                                                                                                                                                                                                                                                          | <code>{<br>"CorrelationId":"a658ab24-70ab-4d05-a792-e5995f237c10",<br>"Errortype":"ServerError",<br>"Message":"Attempted to divide by zero."<br>}</code> |
-
-
 <hr>
+
 ## Variability
 It is possible to invoke the service in test-mode in production. This will not affect any real production data.
 Add the header
@@ -106,8 +105,8 @@ Add the header
     Test-mode: true
 
 to the request to invoke the service in test-mode.
-
 <hr>
+
 ## Usage Guide
 The following is a request for a capture of 200.00 DKK.
 
