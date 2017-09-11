@@ -17,10 +17,11 @@
 	- [Usage Guide](#usage-guide)
 
 <!-- /TOC -->
+
 ## Interface Identity
 The __Payment Status__ REST interface is used to get the status of a payment, as well as the transactions related to that payment.
-
 <hr>
+
 ## Resources
 
 | Http Verb | Url Template                                                   | Description                                                                    |
@@ -28,8 +29,8 @@ The __Payment Status__ REST interface is used to get the status of a payment, as
 | GET       | `/api/v1/merchants/{merchantId}/orders/{orderId}`              | Get the status for a specific payment, identified by merchant id and order id. |
 | GET       | `/api/v1/merchants/{merchantId}/orders/{orderId}/transactions` | Get the transactions associated with a specific payment.                       |
 
-
 <hr>
+
 ## Data Types and Constants
 
 ### Input Fields
@@ -98,9 +99,8 @@ The __Payment Status__ REST interface is used to get the status of a payment, as
 | TotalRefund   | Total payment is refunded by merchant.                        |
 | PartialRefund | Payment is partially refunded by merchant.                    |
 | Rejected      | The reservation, capture, refund or cancellation is rejected. |
-
-
 <hr>
+
 ## Error Handling
 If an error occurs then one of the following http status codes will be returned:
 
@@ -110,9 +110,8 @@ If an error occurs then one of the following http status codes will be returned:
 | 404 Not Found             | <ul><li>MerchantNotFound</li><li>OrderNotFound</li></ul>                                                                                                          | `{ "Reason" : "MerchantNotFound" }`                                                                                                                                                    |
 | 408 Request Timeout       | One or more of the underlying services did not respond in time. This should be investigated by MobilePay team.                                                       | <empty>                                                                                                                                                                                |
 | 500 Internal Server Error | An error happened and should be investigated by MobilePay team.                                                                                                      | <code>{<br>&nbsp;"CorrelationId":"a658ab24-70ab-4d05-a792-e5995f237c10",<br>&nbsp;&nbsp;"Errortype":"ServerError",<br>&nbsp;&nbsp;"Message":"Attempted to divide by zero."<br>}</code> |
-
-
 <hr>
+
 ## Variability
 It is possible to invoke the service in test-mode in production. This will not affect any real production data.
 Add the header
@@ -120,8 +119,8 @@ Add the header
     Test-mode: true
 
 to the request to invoke the service in test-mode.
-
 <hr>
+
 ## Usage Guide
 <ul>
 <li>Request status for an order
