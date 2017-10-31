@@ -80,12 +80,6 @@ The __Payment Status__ REST interface is used to get the status of a payment, as
     "TransactionId": "61872634691623746",
     "Amount": 11.5
   },
-  {
-    "TimeStamp": "2016-04-09T07:45:36.672Z",
-    "PaymentStatus": "Cancelled",
-    "TransactionId": "61872634691623799",
-    "Amount": 18.9
-  }
 ]
 ```
 
