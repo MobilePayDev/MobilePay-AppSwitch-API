@@ -42,15 +42,15 @@ The __Get Reservations__ REST interface is used to get a list of reservations ma
 |:-------------|:------------------------------------------------------------------------------------------------------------------------------|
 | merchantId   | Alphanumeric value consisting the string "APP", a country code, and 10 digits. For example "APPDK0123456789".                 |
 | customerId   | Optional: Identification of customer in MobilePay systems (phone number with prefix, e.g. +45).                               |
-| datetimeFrom | Start of specific interval within which merchant wants to investigate reservations. ISO8601 (local time): 'YYYY-MM-DDTHH_MM'. |
-| datetimeTo   | End of time interval within which merchant wants to investigate reservations. ISO8601 (local time): 'YYYY-MM-DDTHH_MM'.       |
+| datetimeFrom | Start of specific interval within which merchant wants to investigate reservations. ISO8601 (UTC time): 'YYYY-MM-DDTHH_MM'. |
+| datetimeTo   | End of time interval within which merchant wants to investigate reservations. ISO8601 (UTC time): 'YYYY-MM-DDTHH_MM'.       |
 
 ### Responses
 An array of transaction data, where each entry has the following fields:
 
 | Field         | Description                                                                                                                                                                             |
 |:--------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| TimeStamp     | ISO8601 (UTC time) YYYY-MM-DDThh_mm_ssZ (Ex. 2015-01-16T10_53_31Z).                                                                                                             |
+| TimeStamp     | ISO8601 (UTC time) YYYY-MM-DDThh:mm:ss.sss (Ex. 2017-11-01T22:41:00.000).                                                                                                             |
 | OrderId       | Merchant's OrderID.                                                                                                                                                                     |
 | TransactionId | The id of the transaction.                                                                                                                                                              |
 | Amount        | The amount that has been reserved.                                                                                                                                                      |
@@ -61,14 +61,14 @@ An array of transaction data, where each entry has the following fields:
 
 [
   {
-    "TimeStamp": "2016-04-08T07_45_36Z",
+    "TimeStamp": "2016-04-08T07:45:00.000",
     "OrderId": "DB TESTING 2015060908",
     "TransactionId": "61872634691623746",
     "Amount": 100.25,
     "CaptureType": "Full"
   },
   {
-    "TimeStamp": "2016-04-09T07_45_36Z",
+    "TimeStamp": "2016-04-09T07:45:00.000",
     "OrderId": "DB TESTING 2015060908",
     "TransactionId": "61872634691623799"
     "Amount": 100.25,
