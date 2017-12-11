@@ -54,7 +54,7 @@ An array of transaction data, where each entry has the following fields:
 | OrderId       | Merchant's OrderID.                                                                                                                                                                     |
 | TransactionId | The id of the transaction.                                                                                                                                                              |
 | Amount        | The amount that has been reserved.                                                                                                                                                      |
-| CaptureType   | The capture type can be one of the following values:<br><br><ul><li>Full</li><li>Partial</li></ul><br>See [Reservation- and Capture Types](#reservation-and-capture-types) for details. |
+| CaptureType   | The capture type can be one of the following values:<br><br><ul><li>`0` for Full</li><li>`1` for partial Partial</li></ul><br>See [Reservation and Capture Types](#reservation-and-capture-types) for details. |
 
 #### Examples
 ```
