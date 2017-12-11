@@ -65,14 +65,14 @@ An array of transaction data, where each entry has the following fields:
     "OrderId": "DB TESTING 2015060908",
     "TransactionId": "61872634691623746",
     "Amount": 100.25,
-    "CaptureType": "Full"
+    "CaptureType": 0
   },
   {
     "TimeStamp": "2016-04-09T07:45:00.000",
     "OrderId": "DB TESTING 2015060908",
     "TransactionId": "61872634691623799"
     "Amount": 100.25,
-    "CaptureType": "Partial"
+    "CaptureType": 1
   }
 ]
 ```
