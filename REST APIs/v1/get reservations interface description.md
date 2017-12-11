@@ -24,7 +24,7 @@ The __Get Reservations__ REST interface is used to get a list of reservations ma
 |:----------|:------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------|
 | GET       | /api/v1/reservations/merchants/{merchantId}/{datetimeFrom}/{datetimeTo}?customerId={customerId} | Get a list of reservations made by a specific merchant, and optionally for a specific customer. |
 
-### Reservation- and Capture Types
+### Reservation and Capture Types
 
 *   Partial
     *   A partial reservation means that the amount is reserved, but a later capture can be the exact amount reserved __or less__.
