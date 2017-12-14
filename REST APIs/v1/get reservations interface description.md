@@ -57,8 +57,7 @@ An array of transaction data, where each entry has the following fields:
 | CaptureType   | The capture type can be one of the following values:<br><br><ul><li>`0` for Full</li><li>`1` for partial Partial</li></ul><br>See [Reservation and Capture Types](#reservation-and-capture-types) for details. |
 
 #### Examples
-```
-
+```json
 [
   {
     "TimeStamp": "2016-04-08T07:45:00.000",
@@ -70,7 +69,7 @@ An array of transaction data, where each entry has the following fields:
   {
     "TimeStamp": "2016-04-09T07:45:00.000",
     "OrderId": "DB TESTING 2015060908",
-    "TransactionId": "61872634691623799"
+    "TransactionId": "61872634691623799",
     "Amount": 100.25,
     "CaptureType": 1
   }
