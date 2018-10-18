@@ -50,7 +50,7 @@ An array of transaction data, where each entry has the following fields:
 
 | Field         | Description                                                                                                                                                                             |
 |:--------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| TimeStamp     | ISO8601 (UTC time) YYYY-MM-DDThh_mm_ssZ (Ex. 2015-01-16T10_53_31Z).                                                                                                             |
+| TimeStamp     | yyyy-MM-ddThh:mm:ss:SSS (e.g. 2018-10-04T08:17:00.000).                                                                                                             |
 | OrderId       | Merchant's OrderID.                                                                                                                                                                     |
 | TransactionId | The id of the transaction.                                                                                                                                                              |
 | Amount        | The amount that has been reserved.                                                                                                                                                      |
