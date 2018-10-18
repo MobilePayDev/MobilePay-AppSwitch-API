@@ -22,7 +22,7 @@ The service returns a list of all orders with payment status = RES (reserved) wi
 #### Array of data ####
 |Parameter|Type|Description|
 |:--------|:---|:----------|
-|TimeStamp|Char(23)|YYYY-MM-DDThh:mm:ss.ddd (Ex. 2018-10-04T08:17:00.000).|
+|TimeStamp|Char(23)|Date and time format: YYYY-MM-DDThh:mm:ss.ddd (CEST) (e.g. 2018-10-04T08:17:00.000).|
 |OrderID|Char(50)|Merchant's OrderID.|
 |TransactionID|Char(20)|TransactionID.|
 
