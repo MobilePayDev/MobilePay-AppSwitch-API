@@ -26,7 +26,7 @@ The service returns the status of the payment of an order and includes informati
 #### Array of data ####
 |Parameter|Type|Description|
 |:--------|:---|:----------|
-|TimeStamp|Char(23)|ISO8601 (UTC time) YYYY-MM-DDThh:mm:ss.dddZ (Ex. 2015-01-16T10:53:31.601Z).|
+|TimeStamp|Char(23)|Date and time format: YYYY-MM-DDThh:mm:ss.ddd (CEST) (e.g. 2018-10-04T08:17:00.000).|
 |PaymentStatus|Char(3)|Payment status. (See all possible values below)|
 |TransactionID|Char(20)|TransactionID.|
 |Amount|Decimal|Amount in transaction.|
