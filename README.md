@@ -1,5 +1,5 @@
 # MobilePay-AppSwitch API
-Technical documentation on how to interact with MobilePay AppSwitch APIs.
+Technical documentation on how to interact with MobilePay AppSwitch API.
 
 ## REST API
 The folder offers technical documentation on how to interact with the AppSwitch REST API.
