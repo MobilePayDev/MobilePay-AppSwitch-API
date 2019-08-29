@@ -38,7 +38,7 @@ If the customer sees the receipt confirmation screen in MobilePay, the user migh
    1. The Capture endpoint returns Http response 500, but in this case the money was captured successfully.
    1. the Capture endpoint is called again and it replies with Http response 409 and reason code 'Already captured'.
 - Http response code 409 and reason code 'Already captured', 'Already cancelled' or 'Already refunded' should be considered as equal to 200 OK.
-- If the payment should be cancelled after a 500 Http response have been received on the capture, the following should be done (because it is not certain what has happened with the payment):
+- If the payment should be cancelled after a 500 Http response have been received on the Capture, the following should be done (because it is not certain what has happened with the payment):
    1. Call Get Status endpoint.
    1. If the status is 'Captured', call Refund endpoint to transfer money back to the customer.
    1. If the status is 'Reserved', call Cancel endpoint to cancel the reservation.
