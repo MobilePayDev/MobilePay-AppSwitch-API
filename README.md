@@ -33,7 +33,9 @@ If your backend get a status ‘Reserved’ – the user has swiped and the orde
 - The merchant app can crash or be closed by the customer and when it is restarted, the pending order should be fetched with current status from the MobilePay backend. The customer should be able to finish the order when the merchant app is restarted. Alternatively the reservation should be cancelled.
 - The payment flow can be interrupted either forced by the customer using the back or home button or MobilePay can be closed after swipe.
 If the customer sees the receipt confirmation screen in MobilePay, the user might believe that the order is completed, but that will not be the case if interrupted payment flows are not handled in the merchant app and backend.
-- All the endpoints from the MobilePay API can in rare cases return Http response 500 even through the transaction has completed successfully. Best practice is to call Get Status endpoint after Cancel, Refund or Capture in order to check if it was successfull. If e.g. the Capture endpoint is called again it will reply with Http response 409 and reason code 'Already captured'. 
+- All the endpoints from the MobilePay API can in rare cases return Http response 500 even through the transaction has completed successfully. Best practice is to call Get Status endpoint after Cancel, Refund or Capture in order to check if it was successfull. Exanple:
+   1. The Capture endpoint returns Http response 500, but in this case the money was captured successfully.
+   1. the Capture endpoint is called again and it replies with Http response 409 and reason code 'Already captured'.
 - A retry mechanism should be implemented to handle the case, where the endpoint replies with Http response 500.
 - Http response code 409 and reason code 'Already captured', 'Already cancelled' or 'Already refunded' should be considered as equal to 200 OK.
 - If the payment should be cancelled after a 500 Http response have been received on the capture, the following should be done (because it is not certain what has happened with the payment):
