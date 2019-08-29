@@ -13,10 +13,10 @@ _Please note that the SOAP API is not available for new merchants. Example code 
 If your backend get a status ‘Reserved’ – the user has swiped and the order can be completed and payment can be captured though the MobilePay AppSwitch API.
 - Use Get Reservations endpoint to identify unhandled reservations and cancel the reservations by calling the Cancel endpoint.
 - Make sure you do backend validation of the reservation details from the app, e.g. the amount.
-- Testing must be done in production with real money, however you can use a test-mode of the MobilePay endpoints to verify the connection and your code.
+- Testing must be done in production with real money, however you can use a test-mode of the MobilePay endpoints to verify the connection and merchant code.
 - In the merchant implementation there are two options:
-  1. Capture the amount immediately before the product is delivered.
-  1. Deliver the product immediately before the product is delivered. 
+  1. Capture the money immediately before the product is delivered.
+  1. Deliver the product immediately before the money is captured. 
 
 ### Sunshine payment flow
 
