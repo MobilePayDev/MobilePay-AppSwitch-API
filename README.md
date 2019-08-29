@@ -17,9 +17,9 @@ If your backend get a status ‘Reserved’ – the user has swiped and the orde
 
 ### Best practice payment flow
 
-1 - Customer wants to make an order and chooses to pay with MobilePay.
+1- Customer wants to make an order and chooses to pay with MobilePay.
 
-4 - Merchant App calls AppSwitch SDK (reservation).
+4- Merchant App calls AppSwitch SDK (reservation).
 
 
 ### How to handle errors
