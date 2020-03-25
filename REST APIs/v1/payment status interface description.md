@@ -92,7 +92,7 @@ The __Payment Status__ REST interface is used to get the status of a payment, as
 | Captured      | Payment is captured by merchant.                              |
 | TotalRefund   | Total payment is refunded by merchant.                        |
 | PartialRefund | Payment is partially refunded by merchant.                    |
-| Rejected      | Payment was rejected                                          |
+| Rejected      | Reservation was rejected.                                     |
 <hr>
 
 ## Error Handling
