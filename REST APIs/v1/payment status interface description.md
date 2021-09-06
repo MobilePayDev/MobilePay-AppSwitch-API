@@ -27,7 +27,7 @@ The __Payment Status__ REST interface is used to get the status of a payment, as
 | Http Verb | Url Template                                                   | Description                                                                    |
 |:----------|:---------------------------------------------------------------|:-------------------------------------------------------------------------------|
 | GET       | `/api/v1/merchants/{merchantId}/orders/{orderId}`              | Get the status for a specific payment, identified by merchant id and order id. |
-| GET       | `/api/v1/merchants/{merchantId}/orders/{orderId}/transactions` | Get the transactions associated with a specific payment.                       |
+| GET       | `/api/v1/merchants/{merchantId}/orders/{orderId}/transactions` | Get the transaction associated with a specific payment.                       |
 
 <hr>
 
