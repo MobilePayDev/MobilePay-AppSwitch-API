@@ -1,6 +1,8 @@
 # MobilePay-AppSwitch API
 Technical documentation on how to interact with the MobilePay AppSwitch API.
 
+IMPORTANT: AppSwitch is being replaced by a new and improved solution which will be available in October 2021. Note that we will no longer onboard to the old solution but we are opening sandbox for the new solution. Contact developer@mobilepay.dk if you are interested. The current solution will close down by the end of Q1 2022. Learn more about the new solution in our Work-in-Progress documentation
+
 _Please note that the SOAP API is not available for new merchants. Example code regarding PKI factory and SOAP library can be obtained by contacting [developer@mobilepay.dk](mailto://developer@mobilepay.dk)._
 
 ## REST API
